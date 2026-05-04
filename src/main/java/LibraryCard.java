@@ -2,15 +2,16 @@ public class LibraryCard {
     // TODO 1:
     // Add instance fields here.
     // Each LibraryCard object should have its own:
-    // - holderName
-    // - booksCheckedOut
-    // - maxBooksAllowed
+     String holderName;
+     private int booksCheckedOut;
+     private int maxBooksAllowed;
+
 
     // TODO 2:
     // Add static fields here.
     // All LibraryCard objects should share:
-    // - libraryName
-    // - totalCardsCreated
+    private static String libraryName = "Central Library";
+    private static int totalCardsCreated = 0;
     //
     // The starting library name should be "Central Library".
     // The starting number of cards created should be 0.
@@ -19,9 +20,12 @@ public class LibraryCard {
         // TODO 3:
         // Store the constructor parameters in this object's fields.
         // A new card should start with 0 books checked out.
+        this.holderName = holderName;
+        this.maxBooksAllowed = maxBooksAllowed;
 
         // TODO 4:
         // Increase the shared count of total cards created.
+        LibraryCard.totalCardsCreated++;
     }
 
     /**
